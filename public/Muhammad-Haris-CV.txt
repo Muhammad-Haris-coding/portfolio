@@ -1,0 +1,9 @@
+Muhammad Haris — Curriculum Vitae (placeholder)
+==============================================
+
+Replace this file with your real CV PDF, or update the hero "Download CV" link in:
+  src/components/sections/Hero.tsx
+
+Suggested filename: Muhammad-Haris-CV.pdf
+
+Contact: update email and social URLs in src/data/portfolio.ts

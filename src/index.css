@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-neon-cyan: #22d3ee;
+  --color-neon-blue: #38bdf8;
+  --color-neon-violet: #a78bfa;
+  --color-neon-fuchsia: #e879f9;
+
+  --shadow-glow-cyan: 0 0 40px rgba(34, 211, 238, 0.35);
+  --shadow-glow-violet: 0 0 50px rgba(167, 139, 250, 0.4);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    font-family: var(--font-sans);
+  }
+
+  ::selection {
+    background: rgba(56, 189, 248, 0.35);
+    color: #f8fafc;
+  }
+
+  :focus {
+    outline: none;
+  }
+
+  :focus-visible {
+    outline: 2px solid rgba(34, 211, 238, 0.75);
+    outline-offset: 3px;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: 0.75rem;
+    top: 0.75rem;
+    z-index: 200;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(34, 211, 238, 0.45);
+    background: rgba(15, 23, 42, 0.95);
+    padding: 0.65rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #ecfeff;
+    text-decoration: none;
+    transform: translateY(-160%);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .skip-link:focus,
+  .skip-link:focus-visible {
+    transform: translateY(0);
+    box-shadow: 0 0 28px rgba(34, 211, 238, 0.35);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(-18px) translateX(6px);
+    opacity: 0.9;
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.35;
+    filter: blur(60px);
+  }
+  50% {
+    opacity: 0.65;
+    filter: blur(80px);
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes dash-flow {
+  to {
+    stroke-dashoffset: -120;
+  }
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-float {
+  animation: float 7s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 8s ease-in-out infinite;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 12s ease infinite;
+}
+
+.graph-line {
+  stroke-dasharray: 12 8;
+  animation: dash-flow 4s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-pulse-glow,
+  .animate-float,
+  .animate-gradient {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  .graph-line {
+    animation: none;
+  }
+}
