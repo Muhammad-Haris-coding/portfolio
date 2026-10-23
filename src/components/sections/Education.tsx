@@ -1,54 +1,65 @@
 import { motion } from 'framer-motion'
-import { education } from '../../data/portfolio'
+import { education, educationFocus } from '../../data/portfolio'
 import { useSectionInView } from '../../hooks/useSectionInView'
+
+const ease = [0.22, 1, 0.36, 1] as const
 
 export function Education() {
   const { ref, inView } = useSectionInView<HTMLElement>(0.2)
 
   return (
-    <section
-      id="education"
-      ref={ref}
-      className="relative scroll-mt-28 px-4 py-24 sm:px-6"
-    >
-      <div className="mx-auto max-w-3xl">
+    <section id="education" ref={ref} className="relative scroll-mt-28 px-4 py-24 sm:px-6">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent" />
+      <div className="mx-auto max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.55 }}
-          className="mb-14 text-center"
+          transition={{ duration: 0.55, ease }}
+          className="mb-12 text-center"
         >
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-violet-300/90">Education</p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-            Learning trajectory
-          </h2>
-          <p className="mx-auto mt-3 max-w-xl text-sm text-slate-400">
-            Formal computer science foundations with a strong tilt toward AI, vision, and modern product delivery.
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-300/90">
+            Education
           </p>
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+            Education
+          </h2>
         </motion.div>
 
-        <div className="relative pl-8 sm:pl-10">
-          <div className="absolute left-[0.55rem] top-2 bottom-2 w-px bg-gradient-to-b from-cyan-400/70 via-violet-500/55 to-fuchsia-500/45 sm:left-[0.7rem]" />
-          <ul className="space-y-8">
-            {education.map((item, i) => (
-              <motion.li
-                key={item.title}
-                initial={{ opacity: 0, x: -16 }}
-                animate={inView ? { opacity: 1, x: 0 } : {}}
-                transition={{ delay: 0.07 * i, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                className="relative"
-              >
-                <span className="absolute -left-[1.35rem] top-3 flex h-3.5 w-3.5 items-center justify-center sm:-left-[1.55rem]">
-                  <span className="absolute h-5 w-5 rounded-full bg-cyan-400/25 blur-[2px]" />
-                  <span className="relative h-3 w-3 rounded-full bg-gradient-to-br from-cyan-300 to-violet-400 shadow-[0_0_18px_rgba(34,211,238,0.85)] ring-2 ring-slate-950" />
-                </span>
-                <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.08] to-white/[0.02] p-5 shadow-[0_0_40px_rgba(15,23,42,0.75)] backdrop-blur-xl transition hover:border-cyan-400/35 hover:shadow-[0_0_48px_rgba(34,211,238,0.16)]">
-                  <h3 className="text-base font-semibold text-slate-50">{item.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-400">{item.detail}</p>
+        <div className="space-y-6">
+          {education.map((item, i) => (
+            <motion.article
+              key={item.title}
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.08 * i, duration: 0.5, ease }}
+              className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 sm:p-8"
+            >
+              <div className="flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+                  <p className="mt-1 text-sm text-cyan-200">{item.org}</p>
                 </div>
-              </motion.li>
-            ))}
-          </ul>
+                <p className="rounded-full border border-white/10 bg-white/5 px-3 py-1 font-mono text-xs text-slate-300">
+                  {item.period}
+                </p>
+              </div>
+              <p className="mt-4 text-sm leading-relaxed text-slate-400">{item.detail}</p>
+
+              <p className="mt-6 text-[11px] font-semibold uppercase tracking-widest text-slate-500">
+                Focus areas
+              </p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {educationFocus.map((area) => (
+                  <span
+                    key={area}
+                    className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-200"
+                  >
+                    {area}
+                  </span>
+                ))}
+              </div>
+            </motion.article>
+          ))}
         </div>
       </div>
     </section>

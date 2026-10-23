@@ -1,73 +1,49 @@
-# React + TypeScript + Vite
+# Muhammad Haris — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio of **Muhammad Haris**, an AI undergraduate at UET Mardan working in
+**Computer Vision & Machine Learning** (Python, PyTorch, OpenCV, YOLO).
 
-Currently, two official plugins are available:
+- GitHub: https://github.com/Muhammad-Haris-coding
+- LinkedIn: https://www.linkedin.com/in/muhammad-haris35
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## About this site
 
-## React Compiler
+A single-page portfolio presenting verified information only: education at UET Mardan,
+a Deep Learning internship at AlgoHub SMC Pvt. Ltd., and six real projects from my
+public GitHub repositories — CLIP visual search with FAISS, a smart agriculture
+monitoring system, 3D-aware visual spatial analysis, Depth Anything V2 inference,
+the AlgoHub internship project collection, and DETR object detection.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech stack
 
-## Expanding the ESLint configuration
+- React 19 + TypeScript
+- Vite 8
+- Tailwind CSS 4
+- Framer Motion
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Run locally
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev      # start the dev server
+npm run build    # type-check and build for production (outputs to dist/)
+npm run preview  # preview the production build
+npm run lint     # run ESLint
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- `src/data/portfolio.ts` — all personal content (profile, experience, education,
+  skills, projects, links) in one place
+- `src/components/sections/` — page sections: Hero, About, Experience, Education,
+  Skills, Projects, Contact
+- `src/components/layout/` — Navbar and loading screen
+- `public/Muhammad-Haris-CV.txt` — downloadable plain-text CV (served at
+  `/Muhammad-Haris-CV.txt`)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Deployment
+
+The site is a standard Vite production build. Build with `npm run build` and serve the
+`dist/` folder with any static host. No environment variables are required, and all
+routes are in-page anchors (`#about`, `#experience`, `#education`, `#skills`,
+`#projects`, `#contact`) on the single page.

@@ -35,7 +35,7 @@ export function LoadingScreen() {
                   animate={reduceMotion ? { opacity: 1 } : { opacity: [0.4, 1, 0.4] }}
                   transition={reduceMotion ? { duration: 0 } : { duration: 1.6, repeat: Infinity }}
                 >
-                  AI
+                  MH
                 </motion.span>
               </div>
             </motion.div>
@@ -49,7 +49,7 @@ export function LoadingScreen() {
                 }
               />
             </div>
-            <p className="font-mono text-xs text-slate-400">Initializing neural interface…</p>
+            <p className="font-mono text-xs text-slate-400">Muhammad Haris — Portfolio</p>
           </div>
         </motion.div>
       )}
