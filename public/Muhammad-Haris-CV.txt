@@ -1,9 +1,81 @@
-Muhammad Haris — Curriculum Vitae (placeholder)
-==============================================
+Muhammad Haris
+Computer Vision & Machine Learning
+Python | PyTorch | OpenCV | YOLO
+Mardan, Khyber Pakhtunkhwa, Pakistan
 
-Replace this file with your real CV PDF, or update the hero "Download CV" link in:
-  src/components/sections/Hero.tsx
+GitHub:   https://github.com/Muhammad-Haris-coding
+LinkedIn: https://www.linkedin.com/in/muhammad-haris35
+Portfolio: https://github.com/Muhammad-Haris-coding/portfolio
 
-Suggested filename: Muhammad-Haris-CV.pdf
+OPEN TO
+Paid Computer Vision / Machine Learning internships, junior engineering
+roles, and paid project work (including remote).
 
-Contact: update email and social URLs in src/data/portfolio.ts
+SUMMARY
+AI undergraduate at the University of Engineering and Technology (UET),
+Mardan, focused on computer vision and machine learning. Practical
+experience building object detection, image classification, visual search,
+segmentation, and depth estimation systems, including a structured Deep
+Learning internship at AlgoHub with weekly projects and a smart
+agriculture capstone.
+
+EDUCATION
+BS Computer Science (Artificial Intelligence)
+University of Engineering and Technology (UET), Mardan, Pakistan
+Sep 2023 - Sep 2027 (expected) | CGPA 3.83 / 4.00
+
+EXPERIENCE
+Deep Learning Intern - AlgoHub SMC Pvt. Ltd. (Internship)
+Jun 2026 - Aug 2026
+- Completed a structured, weekly Deep Learning and Computer Vision
+  internship programme.
+- Built projects in CNN image classification, face mask detection, plant
+  and crop disease prediction, and face recognition / verification.
+- Implemented YOLOv8 object detection on a vehicle dataset (12 classes).
+- Delivered a Smart Agriculture Monitoring System as the capstone project.
+
+CERTIFICATION
+Deep Learning - AlgoHub SMC Pvt. Ltd. - Issued Sep 2026
+
+SELECTED PROJECTS
+1. CLIP Visual Search with FAISS
+   Natural-language image retrieval: CLIP embeddings indexed in FAISS,
+   served with Gradio. Evaluated on 1,000 images / 50 classes: 69.7%
+   zero-shot accuracy, 74.1% with prompt engineering.
+   https://github.com/Muhammad-Haris-coding/clip-visual-search_local
+
+2. Smart Agriculture Monitoring System
+   Plant disease classification across 38 PlantVillage classes
+   (MobileNetV3) with a FastAPI backend, Streamlit interface, Docker
+   packaging, and an automated test suite.
+   https://github.com/Muhammad-Haris-coding/Smart-Agriculture-Monitoring-System
+
+3. 3D-Aware Visual Spatial Analysis
+   Multi-model pipeline combining YOLO detection, SAM segmentation, and
+   Depth Anything V2 depth estimation for 3D-aware scene understanding.
+   https://github.com/Muhammad-Haris-coding/3d-aware-visual-spatial-analysis
+
+4. Depth Anything V2 Inference
+   PyTorch implementation of monocular depth estimation with a DINOv2
+   backbone and DPT-style dense prediction head.
+   https://github.com/Muhammad-Haris-coding/depth-anything-v2-inference
+
+5. Deep Learning Internship Projects - AlgoHub
+   Weekly internship builds: CNN classification, face mask detection,
+   plant/crop disease prediction, face verification, YOLOv8 detection.
+   https://github.com/Muhammad-Haris-coding/deepLearning-internship-AlgoHub
+
+6. DETR Object Detection
+   Theory and inference implementations for Detection Transformers.
+   https://github.com/Muhammad-Haris-coding/DETR_Object_Detection
+
+TECHNICAL SKILLS
+Computer Vision: OpenCV, object detection (YOLOv8 / Ultralytics), image
+classification, segmentation (SAM), depth estimation, face recognition
+and verification, visual search (CLIP + FAISS), image/video processing.
+Machine Learning & Deep Learning: PyTorch, TensorFlow/Keras, CNNs
+(ResNet, MobileNetV3), model training/evaluation/inference, transfer
+learning, Detection Transformers (DETR).
+Programming & Data: Python, C/C++, NumPy, Pandas, data preprocessing.
+Tools: Git & GitHub, FastAPI, Streamlit, Gradio, Docker, Hugging Face,
+Roboflow, pytest.
