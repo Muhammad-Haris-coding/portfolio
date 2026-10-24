@@ -4,7 +4,7 @@ Personal portfolio of **Muhammad Haris**, an AI undergraduate at UET Mardan work
 **Computer Vision & Machine Learning** (Python, PyTorch, OpenCV, YOLO).
 
 - GitHub: https://github.com/Muhammad-Haris-coding
-- LinkedIn: https://www.linkedin.com/in/muhammad-haris35
+- LinkedIn: https://www.linkedin.com/in/muhammadharisyousafzai
 
 ## About this site
 

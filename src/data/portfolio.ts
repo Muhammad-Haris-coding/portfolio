@@ -14,7 +14,7 @@ export const profile = {
 
 export const socialLinks = {
   github: "https://github.com/Muhammad-Haris-coding",
-  linkedin: "https://www.linkedin.com/in/muhammad-haris35",
+  linkedin: "https://www.linkedin.com/in/muhammadharisyousafzai",
   portfolioRepo: "https://github.com/Muhammad-Haris-coding/portfolio",
   cvPath: "/Muhammad-Haris-CV.txt",
 } as const
